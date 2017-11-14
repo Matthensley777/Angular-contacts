@@ -6,17 +6,21 @@ app.run(function(FIREBASE_CONFIG){
 
 app.config(function($routeProvider){
   $routeProvider
-    .when("/Favs", {
+    .when("/login", {
+      templateUrl: 'partials/login.html',
+      controller: 'LoginCtrl'
+    })
+    .when("/favs", {
       templateUrl: 'partials/contacts/favs.html',
       controller: 'FavsCtrl'
     })
-    .when("/New", {
+    .when("/new", {
       templateUrl: 'partials/contacts/new.html',
       controller: 'NewCtrl'
     })
-    .when("/View", {
+    .when("/view", {
       templateUrl: 'partials/contacts/view.html',
       controller: 'ViewCtrl'
     })
-    .otherwise('/auth');
+    .otherwise('/login');
 });

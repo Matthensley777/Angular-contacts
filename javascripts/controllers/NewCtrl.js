@@ -2,6 +2,7 @@
 
 app.controller("NewCtrl", function($scope){
   $scope.controller = "NewCtrl";
+    console.log("hello from New");
+
 });
 
-  console.log("hello from New");
