@@ -1,5 +1,6 @@
 {
-"contacts":  [{
+"Contacts": {
+    "Contact1": {
         "First Name": "John",
         "Last Name": "Doe",
         "Phone": "555-555-5555",
@@ -7,78 +8,97 @@
         "City": "Franklin",
         "State": "TN",
         "Country": "USA",
-    }, {
-        "First Name": "John",
+    }, 
+    "Contact2": {
+        "First Name": "Jane",
         "Last Name": "Doe",
         "Phone": "555-555-5555",
-        "Street Address": "333 main st.",
-        "City": "Franklin",
+        "Street Address": "4533 south st.",
+        "City": "Columbia",
+        "Zipcode": "34534",
         "State": "TN",
         "Country": "USA",
-    }, {
-        "First Name": "John",
-        "Last Name": "Doe",
+    }, 
+    "Contact3": {
+        "First Name": "Kayci",
+        "Last Name": "Johnson",
         "Phone": "555-555-5555",
-        "Street Address": "333 main st.",
+        "Street Address": "345343 carol st.",
         "City": "Franklin",
+        "Zipcode": "34534",
         "State": "TN",
         "Country": "USA",
-    }, {
-        "First Name": "John",
-        "Last Name": "Doe",
+    }, 
+    "Contact4": {
+        "First Name": "Matt",
+        "Last Name": "Harper",
         "Phone": "555-555-5555",
-        "Street Address": "333 main st.",
+        "Street Address": "3454 2nd St.",
         "City": "Franklin",
+        "Zipcode": "34534",
         "State": "TN",
         "Country": "USA",
-    }, {
-        "First Name": "John",
-        "Last Name": "Doe",
+    }, 
+    "Contact5": {
+        "First Name": "Curt",
+        "Last Name": "Lemings",
         "Phone": "555-555-5555",
-        "Street Address": "333 main st.",
+        "Street Address": " 34532 Tim St.",
         "City": "Franklin",
+        "Zipcode": "34534",
         "State": "TN",
         "Country": "USA",
-    }, {
-        "First Name": "John",
-        "Last Name": "Doe",
+    }, 
+    "Contact6": {
+        "First Name": "Jack",
+        "Last Name": "Joe",
         "Phone": "555-555-5555",
-        "Street Address": "333 main st.",
+        "Street Address": "2342 5th St.",
         "City": "Franklin",
+        "Zipcode": "34534",
         "State": "TN",
         "Country": "USA",
-    }, {
-        "First Name": "John",
-        "Last Name": "Doe",
+    }, 
+    "Contact7": {
+        "First Name": "James",
+        "Last Name": "Mercaldo",
         "Phone": "555-555-5555",
-        "Street Address": "333 main st.",
+        "Street Address": "3455 West St.",
         "City": "Franklin",
+        "Zipcode": "34534",
         "State": "TN",
         "Country": "USA",
-    }, {
+    }, 
+    "Contact8": {
         "First Name": "John",
-        "Last Name": "Doe",
+        "Last Name": "Smith",
         "Phone": "555-555-5555",
-        "Street Address": "333 main st.",
+        "Street Address": "4334 MackHatcher St.",
         "City": "Franklin",
+        "Zipcode": "34534",
         "State": "TN",
         "Country": "USA",
-    }, {
-        "First Name": "John",
-        "Last Name": "Doe",
+    }, 
+    "Contact9": {
+        "First Name": "Wayne",
+        "Last Name": "Debbie",
         "Phone": "555-555-5555",
-        "Street Address": "333 main st.",
+        "Street Address": "8484 9th St.",
         "City": "Franklin",
+        "Zipcode": "34534",
         "State": "TN",
         "Country": "USA",
-    }, {
-        "First Name": "John",
-        "Last Name": "Doe",
+    }, 
+    "Contact10": {
+        "First Name": "Paul",
+        "Last Name": "Mcartney",
         "Phone": "555-555-5555",
-        "Street Address": "333 main st.",
+        "Street Address": "3432 7th st.",
         "City": "Franklin",
+        "Zipcode": "34534",
         "State": "TN",
         "Country": "USA",
     }
-]
 }
+}
+
