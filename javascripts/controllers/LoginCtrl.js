@@ -1,5 +1,6 @@
 "use strict";
 
+
 app.controller("LoginCtrl", function($location, $rootScope, $scope, AuthService){
   $scope.controller = "LoginCtrl";
     $scope.authenticate = () => {
