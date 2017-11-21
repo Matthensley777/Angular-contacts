@@ -1,12 +1,13 @@
 <div id="view">
-  <div class="contacts">
-	<p>First Name: {{Contacts.First_Name}}</p>
-	<p>Last Name: {{Contacts.Last_Name}}</p>
-	<p>Street Address: {{Contacts.Street_Address}}</p>
-	<p>City: {{Contacts.City}}</p>
-	<p>State: {{Contacts.State}}</p>
-	<p>Zip Code: {{Contacts.Zipcode}}</p>
-	<p>Country: {{Contacts.Country}}</p>
-	<p>Phone Number: {{Contacts.Phone}}</p>
+  <div ng-repeat="contact in contacts" class="contacts">
+	<p>First Name: {{contact.FirstName}}</p>
+	<p>Last Name: {{contact.LastName}}</p>
+	<p>Street Address: {{contact.StreetAddress}}</p>
+	<p>City: {{contact.City}}</p>
+	<p>State: {{contact.State}}</p>
+	<p>Zip Code: {{contact.Zipcode}}</p>
+	<p>Country: {{contact.Country}}</p>
+	<p>Phone Number: {{contact.Phone}}</p>
+	<button class="btn btn-default">Delete</button>
   </div>	
 </div>

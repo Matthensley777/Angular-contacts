@@ -1,13 +1,13 @@
 "use strict";
 
-app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope, newCtrl, $routeParams) {
+app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope) {
 
     $scope.contacts = {};
-    console.log('contacts.id', $routeParams.id);
 
     const getContacts = () => {
-        ContactServices.getContacts($routeParams.id).then((results) => {
+        ContactServices.getContacts($rootScope.uid).then((results) => {
             $scope.contacts = results.data;
+            console.log("results getContacts", results.data);
         }).catch((err) => {
             console.log("getContacts", err);
         });
@@ -16,3 +16,4 @@ app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope, newCtrl
 
 
 });
+

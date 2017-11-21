@@ -1,34 +1,34 @@
 <div ng-controller="NewCtrl">
-  <div ng->
+  <div>
     <form>
       <label>First Name:
-        <input type="text" ng-model="postNewContact()"></label><br />
+        <input type="text" ng-model="newContact.FirstName"></label><br />
       <label>
       Last Name:
-      <input type="text" ng-model="postNewContact()"></label><br />
+      <input type="text" ng-model="newContact.LastName"></label><br />
     </form>
     <form>
       <label>Street Address:
-        <input type="text" ng-model="postNewContact()"></label><br />
+        <input type="text" ng-model="newContact.StreetAddress"></label><br />
       <label>
       City:
-      <input type="text" ng-model="postNewContact()"></label><br />
+      <input type="text" ng-model="newContact.City"></label><br />
     </form>
     <form>
       <label>State:
-        <input type="text" ng-model="postNewContact()"/></label><br />
+        <input type="text" ng-model="newContact.State"/></label><br />
       <label>
       Zip Code:
-      <input type="text" ng-model="postNewContact()" /></label><br />
+      <input type="text" ng-model="newContact.Zipcode" /></label><br />
     </form>
     <form>
       <label>Country:
-        <input type="text" ng-model="postNewContact()"></label><br />
+        <input type="text" ng-model="newContact.Country"></label><br />
       <label>
       Phone Number:
-      <input type="text" ng-model="postNewContact()"></label><br />
+      <input type="text" ng-model="newContact.Phone_Number"></label><br />
     </form>
-    <button btn btn-default ng-click="createNewContact(contact)">Submit</button>
+    <button btn btn-default ng-click="createNewContact(newContact)">Submit</button>
   </div>
 </div>
 
