@@ -1,35 +1,35 @@
-<div id="new">
-	<div class="input-group">
-	  <span class="input-group-addon" id="sizing-addon2">   First Name    </span>
-	  <input type="text" class="form-control" ng-validate="" placeholder="First Name" aria-describedby="sizing-addon2">
-	</div>
-	<div class="input-group">
-	  <span class="input-group-addon" id="sizing-addon2">Last Name</span>
-	  <input type="text" class="form-control" ng-validate="" placeholder="Last Name" aria-describedby="sizing-addon2">
-	</div>
-	<div class="input-group">
-	  <span class="input-group-addon" id="sizing-addon2">Street Address</span>
-	  <input type="text" class="form-control" ng-validate="" placeholder="Street Address" aria-describedby="sizing-addon2">
-	</div>
-	<div class="input-group">
-	  <span class="input-group-addon" id="sizing-addon2">City</span>
-	  <input type="text" class="form-control" ng-validate="" placeholder="City" aria-describedby="sizing-addon2">
-	</div>
-	<div class="input-group">
-	  <span class="input-group-addon" id="sizing-addon2">State</span>
-	  <input type="text" class="form-control" ng-validate="" placeholder="State" aria-describedby="sizing-addon2">
-	</div>
-	<div class="input-group">
-	  <span class="input-group-addon" id="sizing-addon2">Zip Code</span>
-	  <input type="text" class="form-control" ng-validate="" placeholder="Zip Code" aria-describedby="sizing-addon2">
-	</div>
-	<div class="input-group">
-	  <span class="input-group-addon" id="sizing-addon2">Country</span>
-	  <input type="text" class="form-control" ng-validate="" placeholder="Country" aria-describedby="sizing-addon2">
-	</div>
-	<div class="input-group">
-	  <span class="input-group-addon" id="sizing-addon2">Phone Number</span>
-	  <input type="text" class="form-control" ng-validate="" placeholder="Phone Number" aria-describedby="sizing-addon2">
-	</div>
-
+<div ng-controller="NewCtrl">
+  <div ng->
+    <form>
+      <label>First Name:
+        <input type="text" ng-model="postNewContact()"></label><br />
+      <label>
+      Last Name:
+      <input type="text" ng-model="postNewContact()"></label><br />
+    </form>
+    <form>
+      <label>Street Address:
+        <input type="text" ng-model="postNewContact()"></label><br />
+      <label>
+      City:
+      <input type="text" ng-model="postNewContact()"></label><br />
+    </form>
+    <form>
+      <label>State:
+        <input type="text" ng-model="postNewContact()"/></label><br />
+      <label>
+      Zip Code:
+      <input type="text" ng-model="postNewContact()" /></label><br />
+    </form>
+    <form>
+      <label>Country:
+        <input type="text" ng-model="postNewContact()"></label><br />
+      <label>
+      Phone Number:
+      <input type="text" ng-model="postNewContact()"></label><br />
+    </form>
+    <button btn btn-default ng-click="createNewContact(contact)">Submit</button>
+  </div>
 </div>
+
+
