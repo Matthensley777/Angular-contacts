@@ -1,16 +1,26 @@
 'use strict';
 
 
-app.service("ContactServices", function ($http, FIREBASE_CONFIG) {
+app.service("ContactServices", function ($http, FIREBASE_CONFIG, $q) {
 
 const getContacts = (userId) => {
-      // console.log("get contacts", Contact);
-  return $http.get(`${FIREBASE_CONFIG.databaseURL}/Contacts.json?orderBy="uid"&equalTo="${userId}"`);
+let Contacts = [];  
+return $q((resolve, reject) => {
+$http.get(`${FIREBASE_CONFIG.databaseURL}/Contacts.json?orderBy="uid"&equalTo="${userId}"`).then((results) => {
+        let fbContacts = results.data;
+        Object.keys(fbContacts).forEach((key) => {
+          fbContacts[key].id = key;
+          Contacts.push(fbContacts[key]);
+        });
+        resolve(Contacts);
+      }).catch((err) => {
+        reject(err);
+      });
+    });
  }; 
 
 
 const postNewContact = (newContact) => {
-    // console.log("postNewContact", newContact);
   return $http.post(`${FIREBASE_CONFIG.databaseURL}/Contacts.json`, JSON.stringify(newContact));
  };
 
@@ -30,8 +40,8 @@ const buildNewContact = (Contacts, userId) => {
     };
 };
 
-const deleteContact = (userId) => {
-    return $http.delete(`${FIREBASE_CONFIG.databaseURL}/Contacts/${userId}.json`);
+const deleteContact = (Id) => {
+    return $http.delete(`${FIREBASE_CONFIG.databaseURL}/Contacts/${Id}.json`);
   };
 
 

@@ -6,13 +6,20 @@ app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope) {
 
     const getContacts = () => {
         ContactServices.getContacts($rootScope.uid).then((results) => {
-            $scope.contacts = results.data;
-            console.log("results getContacts", results.data);
+            $scope.contacts = results;
         }).catch((err) => {
             console.log("getContacts", err);
         });
     };
     getContacts();
+
+    $scope.deleteContact = (Id) => {
+    ContactServices.deleteContact(Id).then((result) =>{
+      getContacts();
+    }).catch((err) =>{
+      console.log("error in deleteContact", err);
+    });
+  };
 
 
 });
