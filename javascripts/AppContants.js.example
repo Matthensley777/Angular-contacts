@@ -1,0 +1,10 @@
+"use strict";
+
+app.constant("", {
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
+  });

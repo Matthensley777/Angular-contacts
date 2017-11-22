@@ -1,20 +1,21 @@
 {
 "Contacts": {
     "Contact1": {
-        "First Name": "John",
-        "Last Name": "Doe",
+        "FirstName": "John",
+        "LastName": "Doe",
         "Phone": "555-555-5555",
-        "Street Address": "333 main st.",
+        "StreetAddress": "333 main st.",
         "City": "Franklin",
+        "Zipcode": "34534",
         "State": "TN",
         "Country": "USA",
         "uid": "2hlw4Us7CzUKsC6l9kHYL4r6iZO2"
     }, 
     "Contact2": {
-        "First Name": "Jane",
-        "Last Name": "Doe",
+        "FirstName": "Jane",
+        "LastName": "Doe",
         "Phone": "555-555-5555",
-        "Street Address": "4533 south st.",
+        "StreetAddress": "4533 south st.",
         "City": "Columbia",
         "Zipcode": "34534",
         "State": "TN",
@@ -22,10 +23,10 @@
         "uid": "2hlw4Us7CzUKsC6l9kHYL4r6iZO2"
     }, 
     "Contact3": {
-        "First Name": "Kayci",
-        "Last Name": "Johnson",
+        "FirstName": "Kayci",
+        "LastName": "Johnson",
         "Phone": "555-555-5555",
-        "Street Address": "345343 carol st.",
+        "StreetAddress": "345343 carol st.",
         "City": "Franklin",
         "Zipcode": "34534",
         "State": "TN",
@@ -33,10 +34,10 @@
         "uid": "2hlw4Us7CzUKsC6l9kHYL4r6iZO2"
     }, 
     "Contact4": {
-        "First Name": "Matt",
-        "Last Name": "Harper",
+        "FirstName": "Matt",
+        "LastName": "Harper",
         "Phone": "555-555-5555",
-        "Street Address": "3454 2nd St.",
+        "StreetAddress": "3454 2nd St.",
         "City": "Franklin",
         "Zipcode": "34534",
         "State": "TN",
@@ -44,10 +45,10 @@
         "uid": "2hlw4Us7CzUKsC6l9kHYL4r6iZO2"
     }, 
     "Contact5": {
-        "First Name": "Curt",
-        "Last Name": "Lemings",
+        "FirstName": "Curt",
+        "LastName": "Lemings",
         "Phone": "555-555-5555",
-        "Street Address": " 34532 Tim St.",
+        "StreetAddress": " 34532 Tim St.",
         "City": "Franklin",
         "Zipcode": "34534",
         "State": "TN",
@@ -55,10 +56,10 @@
         "uid": "2hlw4Us7CzUKsC6l9kHYL4r6iZO2"
     }, 
     "Contact6": {
-        "First Name": "Jack",
-        "Last Name": "Joe",
+        "FirstName": "Jack",
+        "LastName": "Joe",
         "Phone": "555-555-5555",
-        "Street Address": "2342 5th St.",
+        "StreetAddress": "2342 5th St.",
         "City": "Franklin",
         "Zipcode": "34534",
         "State": "TN",
@@ -66,10 +67,10 @@
         "uid": "2hlw4Us7CzUKsC6l9kHYL4r6iZO2"
     }, 
     "Contact7": {
-        "First Name": "James",
-        "Last Name": "Mercaldo",
+        "FirstName": "James",
+        "LastName": "Mercaldo",
         "Phone": "555-555-5555",
-        "Street Address": "3455 West St.",
+        "StreetAddress": "3455 West St.",
         "City": "Franklin",
         "Zipcode": "34534",
         "State": "TN",
@@ -77,10 +78,10 @@
         "uid": "2hlw4Us7CzUKsC6l9kHYL4r6iZO2"
     }, 
     "Contact8": {
-        "First Name": "John",
-        "Last Name": "Smith",
+        "FirstName": "John",
+        "LastName": "Smith",
         "Phone": "555-555-5555",
-        "Street Address": "4334 MackHatcher St.",
+        "StreetAddress": "4334 MackHatcher St.",
         "City": "Franklin",
         "Zipcode": "34534",
         "State": "TN",
@@ -88,10 +89,10 @@
         "uid": "2hlw4Us7CzUKsC6l9kHYL4r6iZO2"
     }, 
     "Contact9": {
-        "First Name": "Wayne",
-        "Last Name": "Debbie",
+        "FirstName": "Wayne",
+        "LastName": "Debbie",
         "Phone": "555-555-5555",
-        "Street Address": "8484 9th St.",
+        "StreetAddress": "8484 9th St.",
         "City": "Franklin",
         "Zipcode": "34534",
         "State": "TN",
@@ -99,10 +100,10 @@
         "uid": "2hlw4Us7CzUKsC6l9kHYL4r6iZO2"
     }, 
     "Contact10": {
-        "First Name": "Paul",
-        "Last Name": "Mcartney",
+        "FirstName": "Paul",
+        "LastName": "Mcartney",
         "Phone": "555-555-5555",
-        "Street Address": "3432 7th st.",
+        "StreetAddress": "3432 7th st.",
         "City": "Franklin",
         "Zipcode": "34534",
         "State": "TN",
