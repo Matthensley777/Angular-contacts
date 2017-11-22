@@ -1,35 +1,59 @@
-<div ng-controller="NewCtrl">
+<body ng-app="validationApp" ng-controller="NewCtrl">
   <div>
-    <form>
-      <label>First Name:
-        <input type="text" ng-model="newContact.FirstName"></label><br />
-      <label>
-      Last Name:
-      <input type="text" ng-model="newContact.LastName"></label><br />
-    </form>
-    <form>
-      <label>Street Address:
-        <input type="text" ng-model="newContact.StreetAddress"></label><br />
-      <label>
-      City:
-      <input type="text" ng-model="newContact.City"></label><br />
-    </form>
-    <form>
-      <label>State:
-        <input type="text" ng-model="newContact.State"/></label><br />
-      <label>
-      Zip Code:
-      <input type="text" ng-model="newContact.Zipcode" /></label><br />
-    </form>
-    <form>
-      <label>Country:
-        <input type="text" ng-model="newContact.Country"></label><br />
-      <label>
-      Phone Number:
-      <input type="text" ng-model="newContact.Phone_Number"></label><br />
-    </form>
-    <button btn btn-default ng-click="createNewContact(newContact)">Submit</button>
+    <div>
+      <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+        <div class="form-group">
+          <label>
+            First Name:
+              <input type="text" name="FirstName" class="form-control" ng-model="newContact.FirstName" required>
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+          Last Name:
+            <input type="text" name="LastName" class="form-control" ng-model="newContact.LastName" required>
+          </label>
+        </div>
+      <div class="form-group">
+        <label>
+          Street Address:
+          <input type="text" name="StreetAddress" class="form-control" ng-model="newContact.StreetAddress" required>
+        </label>
+      </div>
+        <div class="form-group">
+        <label>
+        City:
+        <input type="text" name="City" class="form-control" ng-model="newContact.City" required>
+      </label>
+        </div>
+      <div class="form-group">
+        <label>
+          State:
+          <input type="text" name="State" class="form-control" ng-model="newContact.State" required>
+        </label>
+      </div>
+        <div class="form-group">
+        <label>
+          Zip Code:
+          <input type="text" name="Zipcode" class="form-control" ng-model="newContact.Zipcode" required>
+        </label>
+        </div>
+      <div class="form-group">
+        <label>
+          Country:
+          <input type="text" name="Country" class="form-control" ng-model="newContact.Country" required>
+        </label>
+      </div>
+        <div class="form-group">
+        <label>
+          Phone Number:
+          <input type="text" name="PhoneNumber" class="form-control" ng-model="newContact.PhoneNumber" required>
+        </label>
+        </div>
+        <button btn btn-default ng-click="createNewContact(newContact)" ng-disabled="userForm.$invalid">Submit</button>
+      </form>
+      
+    </div>
   </div>
-</div>
-
+</body>
 
