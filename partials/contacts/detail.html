@@ -1,6 +1,6 @@
-<div id="view">
-  <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4 contacts"><button><i class="fa fa-star" aria-hidden="true"></i></button><button><i class="fa fa-pencil" aria-hidden="true"></i></button>
-  	<button class="btn btn-default detail"><i ng-click="contactDetail(contact.id)" class="fa fa-search"></i></button>
+
+<div id="detail">
+  <div class="contacts"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-pencil" aria-hidden="true"></i>
 	<p>First Name: {{contact.FirstName}}</p>
 	<p>Last Name: {{contact.LastName}}</p>
 	<p>Street Address: {{contact.StreetAddress}}</p>
@@ -10,5 +10,9 @@
 	<p>Country: {{contact.Country}}</p>
 	<p>Phone Number: {{contact.Phone}}</p>
 	<button class="btn btn-default" ng-click="deleteContact(contact.id)">Delete</button>
-  </div>	
+</div>
+
+
+
+
 </div>
