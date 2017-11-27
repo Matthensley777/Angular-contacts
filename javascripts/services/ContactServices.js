@@ -48,10 +48,12 @@ const getSingleContact = (Id) => {
   return $http.get(`${FIREBASE_CONFIG.databaseURL}/Contacts/${Id}.json`);
 };
 
+const updateContact = (contact, Id) => {
+    return $http.put(`${FIREBASE_CONFIG.databaseURL}/Contacts/${Id}.json`, JSON.stringify(contact));
+};
 
 
-
-return {buildNewContact, postNewContact, getContacts, deleteContact, getSingleContact};
+return {buildNewContact, postNewContact, getContacts, deleteContact, getSingleContact, updateContact};
 });
 
 

@@ -1,6 +1,8 @@
 
 <div id="detail">
-  <div class="contacts"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-pencil" aria-hidden="true"></i>
+<div class="contacts">
+  <button class="btn btn-default"><i class="fa fa-star" aria-hidden="true"></i></button>
+  	<button class="btn btn-default" ng-click="editDetail()"><i class="fa fa-pencil" aria-hidden="true"></i></button>
 	<p>First Name: {{contact.FirstName}}</p>
 	<p>Last Name: {{contact.LastName}}</p>
 	<p>Street Address: {{contact.StreetAddress}}</p>
