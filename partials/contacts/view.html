@@ -1,5 +1,13 @@
 <div id="view">
-  <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4 contacts"><button class="btn btn-default"><i class="fa fa-star" aria-hidden="true"></i></button><button class="btn btn-default"><i ng-click="editDetail(contact.id)" class="fa fa-pencil" aria-hidden="true"></i></button>
+
+
+	<div class="input-group input-group-lg col-xs-6 col-xs-offset-3">
+		<span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
+		<input type="text" class="form-control" placeholder="Find a movie" ng-model="searchText">
+	</div>
+
+
+  <div ng-repeat="contact in contacts | filter: searchText" class="col-sm-6 col-md-4 contacts"><button class="btn btn-default"><i class="fa fa-star" aria-hidden="true"></i></button><button class="btn btn-default"><i ng-click="editDetail(contact.id)" class="fa fa-pencil" aria-hidden="true"></i></button>
   	<button class="btn btn-default detail" ng-click="contactDetail(contact.id)"><i ng-click="contactDetail(contact.id)" class="fa fa-search"></i></button>
 	<p>First Name: {{contact.FirstName}}</p>
 	<p>Last Name: {{contact.LastName}}</p>
