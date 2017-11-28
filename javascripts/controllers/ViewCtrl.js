@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope) {
+app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope, $location) {
 
     $scope.contacts = {};
 
@@ -20,6 +20,15 @@ app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope) {
       console.log("error in deleteContact", err);
     });
   };
+
+  $scope.contactDetail = (Id) => {
+    $location.path(`/contacts/detail/${Id}`);
+  };
+
+  $scope.editDetail = (Id) => {
+    $location.path(`/contacts/edit/${Id}`);
+  };
+
 
 
 });

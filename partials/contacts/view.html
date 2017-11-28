@@ -1,6 +1,6 @@
 <div id="view">
-  <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4 contacts">
-  	<button class="btn btn-default detail" ng-click="contactDetail(contact.id)"><i class="fa fa-search"></i></button>
+  <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4 contacts"><button class="btn btn-default"><i class="fa fa-star" aria-hidden="true"></i></button><button class="btn btn-default"><i ng-click="editDetail(contact.id)" class="fa fa-pencil" aria-hidden="true"></i></button>
+  	<button class="btn btn-default detail" ng-click="contactDetail(contact.id)"><i ng-click="contactDetail(contact.id)" class="fa fa-search"></i></button>
 	<p>First Name: {{contact.FirstName}}</p>
 	<p>Last Name: {{contact.LastName}}</p>
 	<p>Street Address: {{contact.StreetAddress}}</p>
