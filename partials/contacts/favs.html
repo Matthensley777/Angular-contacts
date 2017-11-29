@@ -1,3 +1,21 @@
 <div id="favs">
-	<h2>Hello Favorites</h2>
+
+	<div class="input-group input-group-lg col-xs-6 col-xs-offset-3">
+		<span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
+		<input type="text" class="form-control" placeholder="Find a movie" ng-model="searchText">
+	</div>
+
+
+  <div ng-repeat="contact in contacts | filter: searchText" class="col-sm-6 col-md-4 contacts"><button ng-click="" class="btn btn-default"><i class="fa fa-star" aria-hidden="true"></i></button><button class="btn btn-default"><i ng-click="editDetail(contact.id)" class="fa fa-pencil" aria-hidden="true"></i></button>
+  	<button class="btn btn-default detail" ng-click="contactDetail(contact.id)"><i ng-click="contactDetail(contact.id)" class="fa fa-search"></i></button>
+	<p>First Name: {{contact.FirstName}}</p>
+	<p>Last Name: {{contact.LastName}}</p>
+	<p>Street Address: {{contact.StreetAddress}}</p>
+	<p>City: {{contact.City}}</p>
+	<p>State: {{contact.State}}</p>
+	<p>Zip Code: {{contact.Zipcode}}</p>
+	<p>Country: {{contact.Country}}</p>
+	<p>Phone Number: {{contact.Phone}}</p>
+	<button class="btn btn-default" ng-click="deleteContact(contact.id)">Delete</button>
+  </div>	
 </div>

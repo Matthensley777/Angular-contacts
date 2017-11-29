@@ -3,6 +3,7 @@
 app.controller("NewCtrl", function($location, $scope, $rootScope, ContactServices){
 
 $scope.createNewContact = (contact) => {
+				contact.Favorite = false;
                 let newContact = ContactServices.buildNewContact(contact, $rootScope.uid);
                 ContactServices.postNewContact(newContact).then((results)=> {
                 	console.log("results in createNewContact", results);

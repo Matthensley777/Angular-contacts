@@ -36,9 +36,28 @@ const buildNewContact = (Contacts, userId) => {
             "Zipcode": Contacts.Zipcode,
             "Country": Contacts.Country,
             "Phone": Contacts.Phone,
-            "uid":  userId
+            "uid":  userId,
+            "Favorite": Contacts.Favorite
     };
 };
+
+const getFavoriteContacts = (userId) => {
+    let contacts = [];
+    return $q((resolve, reject) => {
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/Contacts.json?orderBy="uid"&equalTo="${userId}"`).then((results) => {
+        let fbContacts = results.data;
+        Object.keys(fbContacts).forEach((key) => {
+          if (fbContacts[key].Favorite) {
+          fbContacts[key].id = key;
+            contacts.push(fbContacts[key]);
+             }
+        });
+        resolve(contacts);
+      }).catch((err) => {
+        reject(err);
+      });
+    });
+  };
 
 const deleteContact = (Id) => {
     return $http.delete(`${FIREBASE_CONFIG.databaseURL}/Contacts/${Id}.json`);
@@ -53,7 +72,7 @@ const updateContact = (contact, Id) => {
 };
 
 
-return {buildNewContact, postNewContact, getContacts, deleteContact, getSingleContact, updateContact};
+return {buildNewContact, postNewContact, getContacts, deleteContact, getSingleContact, updateContact, getFavoriteContacts};
 });
 
 
