@@ -23,7 +23,7 @@ app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope, $locati
 
   $scope.deleteAll = (Id) => {
     ContactServices.deleteAllContacts(Id).then((result) =>{
-    getContacts();
+    ContactServices.getContacts();
     }).catch((err) =>{
       console.log("error in deleteAll", err);
     });
