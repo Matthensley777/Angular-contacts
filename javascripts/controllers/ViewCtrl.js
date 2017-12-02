@@ -21,9 +21,9 @@ app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope, $locati
     });
   };
 
-  $scope.deleteAll = (Id) => {
-    ContactServices.deleteAllContacts(Id).then((result) =>{
-    ContactServices.getContacts();
+  $scope.deleteAll = () => {
+    ContactServices.deleteAllContacts($rootScope.uid).then((result) =>{
+    getContacts();
     }).catch((err) =>{
       console.log("error in deleteAll", err);
     });

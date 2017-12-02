@@ -64,27 +64,42 @@ app.service("ContactServices", function($http, FIREBASE_CONFIG, $q) {
     };
 
 
-    const deleteAllContacts = () => {
-        return $http.delete(`${FIREBASE_CONFIG.databaseURL}/Contacts.json`);
-    };
+    const deleteAllContacts = (uid) => {
+        return $q((resolve, reject) => {
+                $http.get(`${FIREBASE_CONFIG.databaseURL}/Contacts.json?orderBy="uid"&equalTo="${uid}"`).then((results) => {
+                        let fbContacts = results.data;
+                        Object.keys(fbContacts).forEach((key, index) => {
+                                $http.delete(`${FIREBASE_CONFIG.databaseURL}/Contacts/${key}.json`).then(() => {
+                                    if (index === Object.keys(fbContacts).length-1) {
+                                        resolve();
+                                    }
+                                }).catch((error) => {
+                                  console.log("err in deleteAllContacts", error);
+                                });
+                        }); 
+                }).catch((err) => {
+                reject(err);
+            });
+        });
+};
 
-    const getSingleContact = (Id) => {
-        return $http.get(`${FIREBASE_CONFIG.databaseURL}/Contacts/${Id}.json`);
-    };
+const getSingleContact = (Id) => {
+    return $http.get(`${FIREBASE_CONFIG.databaseURL}/Contacts/${Id}.json`);
+};
 
-    const updateContact = (contact, Id) => {
-        return $http.put(`${FIREBASE_CONFIG.databaseURL}/Contacts/${Id}.json`, JSON.stringify(contact));
-    };
+const updateContact = (contact, Id) => {
+    return $http.put(`${FIREBASE_CONFIG.databaseURL}/Contacts/${Id}.json`, JSON.stringify(contact));
+};
 
 
-    return {
-        buildNewContact,
-        postNewContact,
-        getContacts,
-        deleteContact,
-        getSingleContact,
-        updateContact,
-        getFavoriteContacts,
-        deleteAllContacts
-    };
+return {
+    buildNewContact,
+    postNewContact,
+    getContacts,
+    deleteContact,
+    getSingleContact,
+    updateContact,
+    getFavoriteContacts,
+    deleteAllContacts
+};
 });
