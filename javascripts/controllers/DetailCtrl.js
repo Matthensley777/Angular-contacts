@@ -35,4 +35,8 @@ $scope.deleteContact = (Id) => {
     $location.path(`/contacts/edit/${$routeParams.Id}`);
   };
 
+  $scope.addFavorite = (Id) => {
+  $location.path(`contacts/favs/${$routeParams.Id}`);
+ };
+
 });

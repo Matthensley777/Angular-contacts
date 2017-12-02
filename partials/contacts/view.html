@@ -1,5 +1,14 @@
 <div id="view">
-  <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4 contacts"><button class="btn btn-default"><i class="fa fa-star" aria-hidden="true"></i></button><button class="btn btn-default"><i ng-click="editDetail(contact.id)" class="fa fa-pencil" aria-hidden="true"></i></button>
+
+
+	<div class="input-group input-group-lg col-xs-6 col-xs-offset-3">
+		<span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
+		<input type="text" class="form-control" placeholder="Find a movie" ng-model="searchText">
+	</div>
+
+
+  <div ng-repeat="contact in contacts | filter: searchText" class="col-sm-6 col-md-4 contacts"><button ng-show="contact.Favorite" ng-click="addFavorite(contact, contact.id)" class="btn btn-default"><i class="fa fa-star" aria-hidden="true"></i></button>
+  	<button ng-show="!contact.Favorite" ng-click="addFavorite(contact, contact.id)" class="btn btn-default"><i class="fa fa-star-o" aria-hidden="true"></i></button><button class="btn btn-default"><i ng-click="editDetail(contact.id)" class="fa fa-pencil" aria-hidden="true"></i></button>
   	<button class="btn btn-default detail" ng-click="contactDetail(contact.id)"><i ng-click="contactDetail(contact.id)" class="fa fa-search"></i></button>
 	<p>First Name: {{contact.FirstName}}</p>
 	<p>Last Name: {{contact.LastName}}</p>
@@ -11,4 +20,5 @@
 	<p>Phone Number: {{contact.Phone}}</p>
 	<button class="btn btn-default" ng-click="deleteContact(contact.id)">Delete</button>
   </div>	
+  <button class="btn btn-default" ng-click="deleteAll(contact)">Delete All</button>
 </div>

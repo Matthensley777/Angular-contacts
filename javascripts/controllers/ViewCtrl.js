@@ -2,7 +2,7 @@
 
 app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope, $location) {
 
-    $scope.contacts = {};
+    $scope.contacts = [];
 
     const getContacts = () => {
         ContactServices.getContacts($rootScope.uid).then((results) => {
@@ -21,6 +21,14 @@ app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope, $locati
     });
   };
 
+  $scope.deleteAll = () => {
+    ContactServices.deleteAllContacts($rootScope.uid).then((result) =>{
+    getContacts();
+    }).catch((err) =>{
+      console.log("error in deleteAll", err);
+    });
+  };
+
   $scope.contactDetail = (Id) => {
     $location.path(`/contacts/detail/${Id}`);
   };
@@ -29,6 +37,16 @@ app.controller("ViewCtrl", function(ContactServices, $scope, $rootScope, $locati
     $location.path(`/contacts/edit/${Id}`);
   };
 
+ $scope.addFavorite = (contact, Id) => {
+  contact.Favorite = !contact.Favorite;
+  let newContact = ContactServices.buildNewContact(contact, $rootScope.uid);
+  ContactServices.updateContact(newContact, Id).then(() => {
+    getContacts();
+  }).catch((err) => {
+    console.log("error in addFavorite", err);
+  });
+
+ };
 
 
 });
